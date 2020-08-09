@@ -1,0 +1,9 @@
+<div class="balls-container">
+  <div
+    class="ball"
+    *ngFor="let ball of balls; index as i"
+    [ngClass]="{ 'ball--selected': selectedBalls.includes(i + 1) }"
+    (click)="onClickSelectBall(i + 1)"
+    >{{ i + 1 }}</div
+  >
+</div>

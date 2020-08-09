@@ -1,0 +1,41 @@
+<div *ngIf="user" class="container">
+  <h1>Current Jackpot <span class="highlighted">&euro;1,000,000</span></h1>
+  <div class="content-row">
+    <div
+      class="balls-area"
+      balls-area
+      [balls]="balls"
+      [drawnBalls]="drawnBalls"
+      (drawnBallsChange)="drawnBalls = $event"
+      [selectedBalls]="selectedBalls"
+      (selectedBallsChange)="selectedBalls = $event"
+      [user]="user"
+      (userChange)="user = $event"
+      (winnings)="winnings = $event"
+    ></div>
+    <div class="content-side">
+      <div draw [drawnBalls]="drawnBalls" [selectedBalls]="selectedBalls"></div>
+      <div class="notifications">
+        <p
+          class="notifications--text highlighted"
+          *ngIf="winnings && drawnBalls.length"
+        >
+          Congratulations, you've won &euro;{{ winnings }}! 🎉
+        </p>
+        <p class="notifications--text" *ngIf="!winnings && drawnBalls.length">
+          Your bet din't win 😔 Better luck next time!
+        </p>
+        <p class="notifications-text" *ngIf="user.balance < 2">
+          Not enough balance to play 😟
+        </p>
+      </div>
+      <div winnings-table></div>
+    </div>
+  </div>
+  <div user-info *ngIf="user" [user]="user" class="user-info"></div>
+</div>
+<div *ngIf="!user" class="loading">
+  <h1>
+    Loading...
+  </h1>
+</div>

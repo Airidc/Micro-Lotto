@@ -1,0 +1,11 @@
+@import "../../styles/colors.scss";
+@import "../../styles/panel-area.scss";
+
+p {
+  margin: auto;
+  padding: 0.35em;
+
+  &:last-child {
+    color: $gold-brighter;
+  }
+}

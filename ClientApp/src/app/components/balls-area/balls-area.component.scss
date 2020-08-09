@@ -1,0 +1,21 @@
+@import "../../styles/colors.scss";
+@import "../../styles/panel-area.scss";
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5em;
+
+  button {
+    min-width: 100px;
+    background-color: $dark-secondary;
+    border: 2px solid $gold-brighter;
+    color: $gold-brighter;
+    padding: 0.33em;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: $dark;
+    }
+  }
+}

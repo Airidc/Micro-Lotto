@@ -1,0 +1,41 @@
+@import "./colors.scss";
+
+.balls-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 550px;
+  min-height: 54px;
+
+  background-color: $dark-secondary;
+}
+
+.ball {
+  background-color: $light-gray;
+  border: 1px solid gray;
+  border-radius: 100%;
+
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+  //   margin: auto;
+  // Delete this later
+  width: 36px;
+  height: 36px;
+  line-height: 32px;
+  margin: 0.5em;
+
+  color: $dark;
+}
+
+.ball--selected {
+  background-color: #ffc107;
+  border: 2px solid $dark-contrast;
+}

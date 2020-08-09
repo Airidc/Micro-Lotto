@@ -1,0 +1,17 @@
+<div class="panel-area">
+  <h4>Pick your 5 Numbers</h4>
+  <div class="balls-container">
+    <div
+      class="ball"
+      *ngFor="let ball of balls; index as i"
+      [ngClass]="{ 'ball--selected': selectedBalls.includes(i + 1) }"
+      (click)="onClickSelectBall(i + 1)"
+      >{{ i + 1 }}</div
+    >
+  </div>
+  <div class="button-row">
+    <button class="ball-random" (click)="onClickChooseRandom()">Random</button>
+    <button class="ball-clear" (click)="onClickClearSelected()">Clear</button>
+    <button class="ball-bet" (click)="onClickBet()">Bet (&euro;2)</button>
+  </div>
+</div>

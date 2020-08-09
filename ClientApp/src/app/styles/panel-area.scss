@@ -1,0 +1,21 @@
+@import "./colors.scss";
+
+.panel-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin: 0.5em auto;
+
+  max-width: 550px;
+  border-radius: 8px;
+
+  background-color: $dark-contrast;
+  border: 1px solid $dark;
+
+  h4 {
+    text-align: center;
+    padding: 0.5em 0;
+    color: $gold-brighter;
+  }
+}

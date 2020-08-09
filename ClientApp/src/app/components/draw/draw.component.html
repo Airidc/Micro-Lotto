@@ -1,0 +1,11 @@
+<div class="panel-area">
+  <h4>Drawn balls</h4>
+  <div class="balls-container">
+    <div
+      class="ball"
+      *ngFor="let ball of drawnBalls; index as i"
+      [ngClass]="{ 'ball--selected': selectedBalls.includes(ball) }"
+      >{{ ball }}</div
+    >
+  </div>
+</div>
