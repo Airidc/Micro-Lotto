@@ -23,6 +23,8 @@ export class AppComponent {
     this.selectedBalls = [];
     this.drawnBalls = [];
 
+    // I do not like this nested promise either
+    // Should have researched more on how to propery async/await in angular.
     this.userService.GetUser().then((data) => {
       this.user = data as User;
       this.betService.GetAllBetsByUserId(this.user.id).then((data) => {

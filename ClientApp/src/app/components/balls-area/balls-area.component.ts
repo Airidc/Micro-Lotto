@@ -66,7 +66,7 @@ export class BallsAreaComponent {
     this.winnings.emit(winnings);
     this.drawnBallsChange.emit(this.drawnBalls);
 
-    // Update balance
+    // Get updated balance
     await this.userService.GetUser().then((data) => {
       this.user = data as User;
     });
